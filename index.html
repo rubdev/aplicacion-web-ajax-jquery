@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Noticias web RTVE.es</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Menú -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark default-color lighten-4">
+            <a class="navbar-brand" href="index.html"><b>Noticias web RTVE.es</b>  <i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <form class="form-inline my-2 my-lg-0 ml-auto">
+                    <button id="actualizar" class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Actualizar noticias</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!-- Botón para volver arriba -->
+    <button type="button" id="ir-arriba" class="btn btn-outline-default waves-effect">Ir arriba</button>
+
+    <!-- Encabezado -->
+    <h1 class="encabezado" align="center"><b>Descubre las últimas noticias publicadas aquí</b></h1>
+
+    <!-- Contenido 
+    <div id="noticias"></div>-->
+    <div class="container">
+        <div id="noticias" class="row"></div>
+    </div>
+
+    <div class="container separador">
+        <div class="row">
+            <div class="col col-md-6">
+                <button type="button" id="ver-mas" class="btn btn-default">Cargar más noticias</button>
+            </div>        
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4 mt-4 default-color">
+          <div class="container-fluid text-center text-md-left">
+              <div class="row">
+                  <div class="col-md-6 col-offset-3">
+                      <h5 class="text-uppercase">Noticias web RTVE.es</h5>
+                      <p>Es una aplicación web que muestra las noticias publicadas por el medio RTVE haciendo uso de Ajax y jQuery.</p>
+                  </div>
+
+              </div>
+          </div>
+          <div class="footer-copyright py-3 text-center">
+              <div class="container-fluid">
+                <p>Aplicación Web desarrollada por Rubén Segura Romo para la asignatura Desarrollo en Entorno Cliente </p>
+              </div>
+          </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Obtiene las noticias -->
+    <script type="text/javascript" src="js/rtve.js"></script>
+</body>
+
+</html>

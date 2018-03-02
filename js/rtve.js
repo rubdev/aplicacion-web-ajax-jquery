@@ -49,7 +49,6 @@ function Inicio_Ajax() {
 
 var siguientes = 0;
 var lista_noticias = [];
-console.log("SIGUIENTES GLOBAL => "+siguientes)
 
 // Obtiene las noticias de la api de rtve
 function AjaxGet(datos) {
@@ -66,8 +65,7 @@ function AjaxGet(datos) {
 
 // Muestra las noticias en función de la posicion (siguientes) que lleva guardada o desde el principio si es 0
 function MostrarNoticias() {
-  //console.log("SIGUIENTES EN MOSTRAR => "+siguientes)
-  // controla 'ver más' de 4 en 4
+
   var contador = 0;
 
   if (siguientes != 0) {
@@ -75,20 +73,13 @@ function MostrarNoticias() {
   }
 
   for(var i=siguientes;i<lista_noticias.length;i++) {
-    //console.log(lista_noticias[i])
 
     titulo = lista_noticias[i]["longTitle"];
     texto = lista_noticias[i]["summary"];
     imagen = lista_noticias[i]["image"]
     enlace = lista_noticias[i]["htmlUrl"]
-    
-      //siguientes = 0;
-    /*console.log("valor de longTitle: "+titulo)
-    console.log("valor de texto: "+texto)
-    console.log("valor de imagen: "+imagen)
-    console.log("valor de enlace: "+enlace)*/
 
-    $("#noticias").append("<div class='separador card'><img class='img-fluid' src='"+imagen+"'><div class='card-body'><h4 class='card-title'>"+titulo+"</h4><p class='card-text'>"+texto+"</p><a href='"+enlace+"' class='btn btn-default' target='_blank'>Ver la noticia completa</a></div></div>");
+    $("#noticias").append("<div class='col-6'><div class='separador card'><img class='img-fluid' src='"+imagen+"'><div class='card-body'><h4 class='card-title'>"+titulo+"</h4><p class='card-text'>"+texto+"</p><a href='"+enlace+"' class='btn btn-default' target='_blank'>Ver la noticia completa</a></div></div></div>");
 
     if (contador == 3) {
       siguientes = i;

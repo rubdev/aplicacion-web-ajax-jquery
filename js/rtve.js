@@ -52,9 +52,7 @@ var lista_noticias = [];
 
 // Obtiene las noticias de la api de rtve
 function AjaxGet(datos) {
-  console.log("SIGUIENTES EN GET => "+siguientes)
   lista_noticias=datos["page"]["items"];
-  console.log("LISTA EN GET => "+lista_noticias)
   var texto="";
   var titulo="";
   var imagen="";
@@ -79,13 +77,12 @@ function MostrarNoticias() {
     imagen = lista_noticias[i]["image"]
     enlace = lista_noticias[i]["htmlUrl"]
 
-    $("#noticias").append("<div class='col-6'><div class='separador card'><img class='img-fluid' src='"+imagen+"'><div class='card-body'><h4 class='card-title'>"+titulo+"</h4><p class='card-text'>"+texto+"</p><a href='"+enlace+"' class='btn btn-default' target='_blank'>Ver la noticia completa</a></div></div></div>");
+    $("#noticias").append("<div class='separador card'><img class='img-fluid' src='"+imagen+"'><div class='card-body'><h4 align='center' class='card-title'>"+titulo+"</h4><p class='card-text'>"+texto+"</p><a id='enlace-noticia' href='"+enlace+"' class='btn btn-default' target='_blank'>Ver la noticia completa</a></div></div>");
 
     if (contador == 3) {
       siguientes = i;
       contador = 0;
       i = lista_noticias.length
-      console.log("Ya he mostrado 4 noticias, la última: "+siguientes)
     } else {
       contador++;
     }

@@ -2,7 +2,11 @@
 	margin-top: 7%;
 }
 .separador {
-	margin-top: 5%;
+	margin-top: 3%;
+}
+
+.col-6 {
+	display: flex;
 }
 
 #noticias {
@@ -10,9 +14,19 @@
 	margin-top: 3%;
 }
 
+#enlace-noticia {
+	margin-left: 40%;
+}
+
 #ir-arriba {
   position: fixed;
   display: inline-block;
   margin-top: 40%;
   margin-left: 88%;
+  background-color: white;
+}
+
+li {
+	text-align: center;
+	list-style-position: inside;
 }
